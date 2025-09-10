@@ -1,3 +1,26 @@
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch("https://script.google.com/macros/s/AKfycbwvrMewCswNUWIWRkZnAJGpsuFb_lLxnfVwLYlAMMY5zWuTrJSV_OAmIUfHwbDaxy4a/exec
+", {
+    method: "POST",
+    body: JSON.stringify({
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value,
+      interest: this.interest.value,
+      message: this.message.value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert("Thank you! We will contact you soon.");
+    this.reset();
+  })
+  .catch(err => alert("Something went wrong!"));
+});
+</script>
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
