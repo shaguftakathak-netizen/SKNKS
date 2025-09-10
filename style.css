@@ -97,7 +97,16 @@ img{max-width:100%;display:block;object-fit:cover}
 @media (max-width: 900px){
   .hero-grid{grid-template-columns:1fr}
 }
-
+.about-highlight {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand2); /* matches your theme */
+  text-align: center;
+  background: linear-gradient(135deg, var(--brand2), var(--brand3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* gradient text */
+}
 /* Two column generic */
 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center}
 .rounded-img{border-radius:24px; border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow)}
