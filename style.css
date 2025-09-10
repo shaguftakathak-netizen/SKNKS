@@ -77,8 +77,20 @@ img{max-width:100%;display:block;object-fit:cover}
 .shine{position:absolute; inset:0; background:linear-gradient(120deg, transparent, rgba(255,255,255,.15), transparent); transform:translateX(-100%); animation:shine 4s ease-in-out infinite}
 @keyframes shine{ 50%{ transform:translateX(100%)} 100%{ transform:translateX(100%)} }
 .hero-badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
-.ribbon{position:absolute; left:50%; transform:translateX(-50%); bottom:-22px; padding:10px 18px; background:linear-gradient(135deg,var(--brand2),var(--brand3)); color:#3a2500; border-radius:999px; font-weight:700; box-shadow:0 12px 30px rgba(245,158,11,.45); text-decoration:none}
-.floaty{animation:floaty 6s ease-in-out infinite}
+.ribbon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -22px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, var(--brand2), var(--brand3));
+  color: #3a2500;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(245, 158, 11, .45);
+  text-decoration: none;
+  z-index: 9999; /* 👈 add this */
+}.floaty{animation:floaty 6s ease-in-out infinite}
 @keyframes floaty{50%{transform:translateY(-6px)}}
 
 @media (max-width: 900px){
