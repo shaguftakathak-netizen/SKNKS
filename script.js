@@ -1,26 +1,23 @@
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+// Contact Form Submit
+const form = document.getElementById("contact-form");
+const scriptURL = "https://script.google.com/macros/s/AKfycbwvrMewCswNUWIWRkZnAJGpsuFb_lLxnfVwLYlAMMY5zWuTrJSV_OAmIUfHwbDaxy4a/exec";
+
+form.addEventListener("submit", e => {
   e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycbwvrMewCswNUWIWRkZnAJGpsuFb_lLxnfVwLYlAMMY5zWuTrJSV_OAmIUfHwbDaxy4a/exec
-", {
+  fetch(scriptURL, {
     method: "POST",
-    body: JSON.stringify({
-      name: this.name.value,
-      email: this.email.value,
-      phone: this.phone.value,
-      interest: this.interest.value,
-      message: this.message.value
+    body: new FormData(form)  // ✅ send as FormData, not JSON
+  })
+    .then(response => {
+      alert("✅ Thank you! We will contact you soon.");
+      form.reset();
     })
-  })
-  .then(res => res.json())
-  .then(data => {
-    alert("Thank you! We will contact you soon.");
-    this.reset();
-  })
-  .catch(err => alert("Something went wrong!"));
+    .catch(error => {
+      console.error("Error!", error.message);
+      alert("❌ Something went wrong. Please try again!");
+    });
 });
-</script>
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
