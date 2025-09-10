@@ -266,25 +266,23 @@
           </div>
         </div>
       </div>
-      <form class="contact-form reveal-right" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.'); this.reset();">
-        <div class="form-grid">
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <input type="tel" placeholder="Phone / WhatsApp" required>
-          <select required>
-            <option value="">Interested In…</option>
-            <option>Kathak Classes</option>
-            <option>Folk / Dandiya</option>
-            <option>Bollywood / Semi-Classical</option>
-            <option>Kids Program</option>
-            <option>Wedding Choreography</option>
-            <option>Events / Shows</option>
-            <option>Competitions</option>
-          </select>
-          <textarea rows="4" placeholder="Your Message"></textarea>
-        </div>
-        <button class="btn btn-primary big" type="submit">Send Enquiry</button>
-      </form>
+      <form id="contact-form">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+  <select name="interest" required>
+    <option value="">Interested In…</option>
+    <option>Kathak Classes</option>
+    <option>Folk / Dandiya</option>
+    <option>Bollywood / Semi-Classical</option>
+    <option>Kids Program</option>
+    <option>Wedding Choreography</option>
+    <option>Events / Shows</option>
+    <option>Competitions</option>
+  </select>
+  <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+  <button type="submit">Send Enquiry</button>
+</form>
     </div>
   </section>
 
