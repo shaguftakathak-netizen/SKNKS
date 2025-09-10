@@ -108,9 +108,57 @@ img{max-width:100%;display:block;object-fit:cover}
   -webkit-text-fill-color: transparent; /* gradient text */
 }
 /* Two column generic */
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center}
-.rounded-img{border-radius:24px; border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow)}
-@media (max-width: 900px){ .two-col{grid-template-columns:1fr} }
+.container.two-col {
+  display: flex;
+  align-items: flex-start;  /* align at the top */
+  gap: 2rem;                /* space between left & right */
+}
+
+.about-media {
+  flex: 1;
+  text-align: center;
+}
+
+.about-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-highlight {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand2);
+}
+
+.about-content {
+  flex: 2; /* give more space for the long text */
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--brand2);
+}
+
+.about-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .container.two-col {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    margin-top: 20px;
+  }
+}
+
 
 /* Ticks */
 .ticks{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px}
