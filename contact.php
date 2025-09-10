@@ -6,7 +6,7 @@ $password   = "dbpass";      // your db password
 $dbname     = "dance_school"; // your database name
 
 // Email config
-$to      = "your-email@example.com";  // change this to your email
+$to      = "shaguftakathak@gmail.com";  // change this to your email
 $subject = "New Enquiry from Website";
 
 // Connect to DB
